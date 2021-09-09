@@ -1,0 +1,23 @@
+.info-section h1{
+    color: var(--color-heading);
+    font-size: 46px;
+    font-weight: 600;
+}
+.info-section h2{
+    color: var(--color-heading);
+    font-size: 32px;
+    font-weight: bold;
+}
+.info-section h3{
+    color: var(--color-heading);
+    font-size: 20px;
+    font-weight: bold;
+}
+.info-section p{
+    color: var(--color-default-text);
+    font-size: 18px;
+    font-weight: normal;
+}
+.hero p {
+    font-size: 22px;
+}

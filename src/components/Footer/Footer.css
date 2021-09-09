@@ -1,0 +1,9 @@
+footer {
+    background: var(--color-blue);
+    color: white;
+    min-height: 60px;
+}
+
+.footer__copyright span{
+    margin-left: 40px;
+}

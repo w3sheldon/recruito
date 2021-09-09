@@ -1,1 +1,64 @@
+/* 
+  1. buttons 
+  
+*/
 
+:root {
+  --color-blue: #4296CB;
+  --color-bg: white;
+  --color-smoke: whitesmoke;
+  --color-heading: #394E5D;
+  --color-default-text: #182333;
+  --color-btn-blue: #4285BC; 
+
+}
+
+.dark-theme {
+  --color-blue: #4296CB;
+  --color-bg: white;
+  --color-smoke: whitesmoke;
+  --color-heading: #394E5D;
+  --color-default-text: #182333;
+  --color-btn-blue: #4285BC; 
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+    color: var(--color-default-text);
+}
+
+/* helpers */
+.full-height {
+  min-height: 100vh;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+}
+
+/* 1. buttons */
+.recro-btn {
+  display: block;
+  white-space: nowrap;
+  padding: 0px 5px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  max-width: 140px;
+  border-radius: 32px;
+  border: 1px solid var(--color-btn-blue);
+  max-height: 40px;
+  text-align: center;
+  color: var(--color-btn-blue);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.recro-btn:hover {
+  background-color: var(--color-btn-blue);
+  color: white;
+}
+
+/* end buttons */

@@ -1,0 +1,69 @@
+.navbar--main {
+  min-height: 60px;
+  padding: 0;
+}
+@media (max-width: 576px) {
+  .navbar--main {
+    min-height: initial;
+    padding: 10px;
+  }
+}
+
+.navbar--main .nav-link {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-heading) !important;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    position: relative;
+}
+
+@media (min-width: 1400px) {
+  .navbar--main .nav-link {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+}
+
+@media (min-width: 576px) {
+  .navbar--main .nav-link::after, .navbar--main .nav-link.selected::after{
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    bottom: -4px;
+    left: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: translateX(-50%);
+    background-color: var( --color-blue);
+    transition: transform 0.15s;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0.5;
+  }
+
+
+  .navbar--main .nav-link:hover::after{ 
+    transform: scaleY(1);
+  }
+  
+  .navbar--main .nav-link.selected::after{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.navbar-toggler, .navbar-toggler:visited, .navbar-toggler:focus  {
+  border: 0;
+  box-shadow: none;
+  outline: 0;
+}
+
+@media (max-width: 576px) { 
+  .navbar--main .nav-link.selected {
+    color: var( --color-blue) !important;
+  }
+}

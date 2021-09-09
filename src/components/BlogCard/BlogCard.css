@@ -1,0 +1,43 @@
+.blog-card{
+    text-decoration: none;
+    color: var(--color-default-text);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    height: 80%;
+}
+
+.card-title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-heading);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.card-text {
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--color-default-text);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.blog-card a{
+    text-decoration: none !important;
+    color: var(--color-default-text);
+}
+
+.blog-card:hover{
+    box-shadow: 0px 2px 16px #acacac;
+}
