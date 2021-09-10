@@ -1,7 +1,7 @@
 #
 
 <p align="center">
-  <img src="./src/images/rec-logo.svg" width="15%">
+  <img src="/images/rec-logo.svg" width="15%">
   <h1 align="center">
     RECRUITO
   </h1>
