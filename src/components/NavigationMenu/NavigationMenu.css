@@ -67,3 +67,39 @@
     color: var( --color-blue) !important;
   }
 }
+
+
+.navbar-toggler {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 575px) {
+  .navbar-collapse {
+    height: 100vh !important;
+    display: flex;
+  }
+  .navbar-nav {
+    margin-left: 0;
+    margin-right: auto;
+    max-height: 200px;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .nav-link.selected:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -15px;
+    border-radius: 50%;
+    background-color: var(--color-btn-blue);
+  }
+}
+
+.navbar-collapse.show{
+  
+}

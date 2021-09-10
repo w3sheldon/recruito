@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
 import BlogCard from '../BlogCard/BlogCard';
 
-function BlogCards({ props, blogsToShow = 4 }) {
+function BlogCards({ blogsToShow = 4, ...props }) {
   // https://jsonplaceholder.typicode.com/posts
 
   const [isLoading, setIsLoading] = useState(true);
@@ -22,10 +22,9 @@ function BlogCards({ props, blogsToShow = 4 }) {
       .catch((error) => console.log(error));
   }, []);
 
-  console.log(data);
-
   return (
-    <Container className="blog-cards p-3 p-md-0" {...props}>
+    // <Container className="blog-cards p-3 p-md-0" {...props}>
+    <Container className={`blog-cards p-3 p-md-0 ${props.className || ''}`}>
       <Row>
         {isLoading ? (
           <Col xs={12} className="d-flex justify-content-center">
@@ -38,7 +37,7 @@ function BlogCards({ props, blogsToShow = 4 }) {
             (blog, index) =>
               index < blogsToShow && (
                 <Col key={index} xs={12} sm={4} md={4} lg={3}>
-                  <BlogCard title={blog.title} body={blog.body} exact link={blog.id} />
+                  <BlogCard title={blog.title} body={blog.body} link={blog.id} />
                 </Col>
               )
           )

@@ -26,6 +26,7 @@ body {
     background-color: var(--color-bg);
     font-family: 'Montserrat', sans-serif, Arial, Helvetica;
     color: var(--color-default-text);
+    width: 100%;
 }
 
 /* helpers */

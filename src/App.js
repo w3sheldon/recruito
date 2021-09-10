@@ -8,11 +8,13 @@ import Blog from './pages/Blog/Blog';
 import Footer from './components/Footer/Footer';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import BlogPage from './pages/BlogPage/BlogPage';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ overflow: 'hidden' }}>
       <Router>
+        <ScrollToTop />
         <NavigationMenu />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -23,7 +25,7 @@ function App() {
           <Route path="*" component={PageNotFound} />
         </Switch>
       </Router>
-      <Footer />
+      <Footer className="mt-5" />
     </div>
   );
 }

@@ -7,13 +7,14 @@ import BlogCards from '../../components/BlogCards/BlogCards';
 import Logos from './Logos';
 import { useTitle } from '../../hooks/changePageTitle';
 import './Home.css';
+import BrandLogos from './BrandLogos';
 
 export default function Home() {
   useTitle('Home');
   return (
-    <Container className="pb-5">
-      <div className="info-section hero">
-        <Row className="full-height align-content-center align-items-center">
+    <>
+      <Container>
+        <Row className="info-section hero full-height align-content-center align-items-center">
           <Col xs={12} sm={6}>
             <h1 className="mt-5">Start new... Today!</h1>
             <p>Vivamus vestibulum elit efficitur, elementum sapien a, aliquet ipsum</p>
@@ -27,9 +28,8 @@ export default function Home() {
             />
           </Col>
         </Row>
-      </div>
-
-      <div className="info-section">
+      </Container>
+      <Container className="info-divsection py-5">
         <h2 className="text-center mb-5">Lorem ipsum something</h2>
         <Row className="align-content-center align-items-center flex-row-reverse">
           <Col xs={12} sm={6}>
@@ -50,18 +50,18 @@ export default function Home() {
             />
           </Col>
         </Row>
-      </div>
+      </Container>
 
-      {/* <Logos /> */}
+      <Container fluid className="py-5">
+        <Row>
+          <BrandLogos />
+        </Row>
+      </Container>
 
-      <Row>
-        <BlogCards className="feature-blogs mt-5" />
-        <Col>
-          <Link to="/blog" className="recro-btn mx-auto">
-            Read more
-          </Link>
-        </Col>
-      </Row>
-    </Container>
+      <BlogCards className="feature-blogs mt-5" />
+      <Link to="/blog" className="recro-btn mx-auto">
+        Read more
+      </Link>
+    </>
   );
 }

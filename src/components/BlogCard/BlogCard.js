@@ -5,7 +5,7 @@ import './BlogCard.css';
 
 function BlogCard({ title = '', body = '', image = '/images/blog-image.png', link }) {
   return (
-    <Card className="my-4 my-md-5 blog-card" as={Link} exact to={`/blog/${link}`}>
+    <Card className="my-4 my-md-5 blog-card" as={Link} to={`/blog/${link}`}>
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title as="h3">{title}</Card.Title>

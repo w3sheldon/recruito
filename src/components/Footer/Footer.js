@@ -2,9 +2,9 @@ import React from 'react';
 import './Footer.css';
 import Container from 'react-bootstrap/Container';
 
-function Footer() {
+function Footer({ ...props }) {
   return (
-    <footer className="d-flex align-items-center">
+    <footer className={`d-flex align-items-center ${props.className || ''}`}>
       <Container>
         <div className="d-flex align-content-center align-items-center justify-content-center justify-content-sm-start footer__copyright ">
           <img src="/images/rec-logo-white.svg" alt="a white only design version of the company logo" />
