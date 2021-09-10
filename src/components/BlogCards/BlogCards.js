@@ -7,8 +7,6 @@ import Spinner from 'react-bootstrap/Spinner';
 import BlogCard from '../BlogCard/BlogCard';
 
 function BlogCards({ blogsToShow = 4, ...props }) {
-  // https://jsonplaceholder.typicode.com/posts
-
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -23,7 +21,6 @@ function BlogCards({ blogsToShow = 4, ...props }) {
   }, []);
 
   return (
-    // <Container className="blog-cards p-3 p-md-0" {...props}>
     <Container className={`blog-cards p-3 p-md-0 ${props.className || ''}`}>
       <Row>
         {isLoading ? (
@@ -36,7 +33,14 @@ function BlogCards({ blogsToShow = 4, ...props }) {
           data.map(
             (blog, index) =>
               index < blogsToShow && (
-                <Col key={index} xs={12} sm={4} md={4} lg={3}>
+                <Col
+                  key={index}
+                  xs={12}
+                  sm={4}
+                  md={4}
+                  lg={3}
+                  className={`${blogsToShow <= 4 && index >= 2 ? 'd-none d-md-block' : ''}`}
+                >
                   <BlogCard title={blog.title} body={blog.body} link={blog.id} />
                 </Col>
               )
